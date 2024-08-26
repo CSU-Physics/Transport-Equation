@@ -46,8 +46,9 @@ export default function Home() {
         <h2 className=" text-lg sm:text-xl" >THEORY</h2>
         <div>
           <div className={"my-2 p-4"}>
-            <p class="ltx_p">The transport of pollution in a three-dimensional stream with the diffusion coefficient <math id="S1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> flowing with velocity <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span>, when there is source or sink <math id="S1.p1.m3" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>, can be described by the convection-diffusion equation</p>
-
+            <div className={"mb-8"} >
+              <p class="ltx_p">The transport of pollution in a three-dimensional stream with the diffusion coefficient <math id="S1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> flowing with velocity <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span>, when there is source or sink <math id="S1.p1.m3" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>, can be described by the convection-diffusion equation</p>
+            </div>
             <table id="S1.E1" class="ltx_equation ltx_eqn_table">
               <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
                 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
@@ -59,8 +60,11 @@ export default function Home() {
           </div>
 
           <div className={"my-2 p-4"}>
-            <p class="ltx_p">where <math id="S1.p1.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is the pollution concentration.
-              The transport equation (<a href="#S1.E1" title="In I Transport equation in three dimensions ‣ Numerical simulation of radioactive pollution diffusion in 3D stream" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in a Cartesian coordinate system, where the fluid is moving with the constant velocity of <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span> can be represented as</p>
+            <div className={"mb-8"} >
+              <p class="ltx_p">where <math id="S1.p1.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is the pollution concentration.
+                The transport equation (<a href="#S1.E1" title="In I Transport equation in three dimensions ‣ Numerical simulation of radioactive pollution diffusion in 3D stream" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in a Cartesian coordinate system, where the fluid is moving with the constant velocity of <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span> can be represented as</p>
+            </div>
+
             <table id="A2.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
 
               <tbody id="S1.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -124,7 +128,10 @@ export default function Home() {
         {/*  */}
         <div id="S1.p2" class="ltx_para">
           <div className={"my-2 p-4 leading-6"} >
-            <p class="ltx_p">Considering the boundary conditions, the pollution concentration must converge to zero as <math id="S1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="S1.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, or <math id="S1.p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> tends to infinity</p>
+            <div className={"mb-6"} >
+              <p class="ltx_p">Considering the boundary conditions, the pollution concentration must converge to zero as <math id="S1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="S1.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, or <math id="S1.p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> tends to infinity</p>
+            </div>
+
             <table id="A2.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
 
               <tbody id="S1.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -146,7 +153,10 @@ export default function Home() {
                 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
               </tr></tbody>
             </table>
-            <p class="ltx_p">and the initial condition,</p>
+            <div className={"mb-6"} >
+              <p class="ltx_p">and the initial condition,</p>
+            </div>
+
             <table id="A2.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
 
               <tbody id="S1.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -159,8 +169,11 @@ export default function Home() {
           </div>
 
           <div className={"my-2 p-4 leading-6"} >
-            <p class="ltx_p">where <math id="S1.p2.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the released point-source pollution at location <math id="S1.p2.m5" class="ltx_Math" alttext="(x_{0},y_{0},z_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo>,</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> and time <math id="S1.p2.m6" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>. In a 1D model in <math id="S1.p2.m7" class="ltx_Math" alttext="x-" display="inline"><mrow><mi>x</mi><mo>−</mo></mrow></math>direction, <math id="S1.p2.m8" class="ltx_Math" alttext="M\equiv\frac{M}{L_{y}\cdot L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></mfrac></mrow></math> represents the surface mass flux or total mass per unit area, where <math id="S1.p2.m9" class="ltx_Math" alttext="L_{y}\cdot L_{z}" display="inline"><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></math> is the area scale of neglected dimensions. Similarly, in a 2D model in the <math id="S1.p2.m10" class="ltx_Math" alttext="x-y" display="inline"><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></math> direction, <math id="S1.p2.m11" class="ltx_Math" alttext="M\equiv\frac{M}{L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><msub><mi>L</mi><mi>z</mi></msub></mfrac></mrow></math> represents linear mass flux or total mass per unit length, where <math id="S1.p2.m12" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> is the area scale of neglected dimension.
-              The total mass of pollution at time <math id="S1.p2.m13" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> must be equal to the number of undecayed pollution at time <math id="S1.p2.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, i.e. <math id="S1.p2.m15" class="ltx_Math" alttext="M(t)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. So, the boundary and initial conditions are</p>
+            <div className={"mb-6"}  >
+              <p class="ltx_p">where <math id="S1.p2.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the released point-source pollution at location <math id="S1.p2.m5" class="ltx_Math" alttext="(x_{0},y_{0},z_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo>,</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> and time <math id="S1.p2.m6" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>. In a 1D model in <math id="S1.p2.m7" class="ltx_Math" alttext="x-" display="inline"><mrow><mi>x</mi><mo>−</mo></mrow></math>direction, <math id="S1.p2.m8" class="ltx_Math" alttext="M\equiv\frac{M}{L_{y}\cdot L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></mfrac></mrow></math> represents the surface mass flux or total mass per unit area, where <math id="S1.p2.m9" class="ltx_Math" alttext="L_{y}\cdot L_{z}" display="inline"><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></math> is the area scale of neglected dimensions. Similarly, in a 2D model in the <math id="S1.p2.m10" class="ltx_Math" alttext="x-y" display="inline"><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></math> direction, <math id="S1.p2.m11" class="ltx_Math" alttext="M\equiv\frac{M}{L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><msub><mi>L</mi><mi>z</mi></msub></mfrac></mrow></math> represents linear mass flux or total mass per unit length, where <math id="S1.p2.m12" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> is the area scale of neglected dimension.
+                The total mass of pollution at time <math id="S1.p2.m13" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> must be equal to the number of undecayed pollution at time <math id="S1.p2.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, i.e. <math id="S1.p2.m15" class="ltx_Math" alttext="M(t)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. So, the boundary and initial conditions are</p>
+            </div>
+
             <table id="S1.E9" class="ltx_equation ltx_eqn_table">
 
               <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -173,7 +186,10 @@ export default function Home() {
           </div>
 
           <div className={"my-2 p-4 leading-6 "}>
-            <p class="ltx_p">If the source of the contamination is radioactive material, the mass of undecayed material at time <math id="S1.p2.m16" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is given by the radioactive decay law</p>
+            <div className={"mb-6"} >
+              <p class="ltx_p">If the source of the contamination is radioactive material, the mass of undecayed material at time <math id="S1.p2.m16" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is given by the radioactive decay law</p>
+            </div>
+
             <table id="S1.E10" class="ltx_equation ltx_eqn_table">
 
               <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -186,8 +202,12 @@ export default function Home() {
           </div>
 
           <div className={"my-2 p-4 leading-6 mb-6 "} >
-            <p class="ltx_p">where <math id="S1.p2.m17" class="ltx_Math" alttext="\lambda=\frac{\ln(2)}{T_{1/2}}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><msub><mi>T</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msub></mfrac></mrow></math> is the decay constant for the induced radioactive material.
-              For an instantaneous point-source pollution</p>
+
+            <div className={"mb-6"} >
+              <p class="ltx_p">where <math id="S1.p2.m17" class="ltx_Math" alttext="\lambda=\frac{\ln(2)}{T_{1/2}}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><msub><mi>T</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msub></mfrac></mrow></math> is the decay constant for the induced radioactive material.
+                For an instantaneous point-source pollution</p>
+            </div>
+
             <table id="A2.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
 
               <tbody id="S1.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
