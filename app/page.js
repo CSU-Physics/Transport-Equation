@@ -1,113 +1,258 @@
 import Image from "next/image";
-
+import Comp from "./Components/Comp";
+import photo_1D from "./Assets/1D.png"
+import gif_1D from "./Assets/1D.gif"
+import photo_2D from "./Assets/2D.png"
+import gif_2D from "./Assets/2D.gif"
+import photo_3D from "./Assets/3D.gif"
+import "./LaTeXML.css"
+import "./ltx-article.css"
+import "./ltx-listings.css"
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="p-2 px-8 py-2 h-[100%] flex flex-col justify-center md:px-20 mt-8">
+      <h1 className=" text-xl sm:text-2xl md:px-8 lg:px-12" >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+      <section className={"mt-4 my-6 md:my2"} >
+        <div className="leading-6 md:px-8 lg:px-12" >
+          In an earlier study, we showed how Pulsed Neutron Activation (PNA) analysis could be implemented to estimate the flow speed in a one-dimensional pipeline [1]. The neutron capture by target stable nuclides, like Oxygen-16 in water, leads to radioactive Nitrogen-16 emitting high-energy
+          gamma-rays, which travels with flowing water in a channel and can be detected and analyzed downstream in the pipe to get information about its average transport time. Then by having the traveled
+          distance, i.e., the distance between the gamma source and the gamma detector, one can obtain
+          the speed of the activity and, consequently, the flow speed and mass rate in the pipeline. This
+          report shows how we can extend the technique to study pollution diffusion, including radioactive
+          pollution, in a three-dimensional stream.
         </div>
-      </div>
+        {/* <div className="my-4 leading-6 md:px-8 lg:px-12" >
+          Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+          sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+          recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
+          minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
+          quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
+          fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
+          consequuntur! Commodi minima excepturi repudiandae velit hic maxime
+          doloremque.
+        </div>
+        <div className="my-4 leading-6 md:px-8 lg:px-12">
+          Quaerat provident commodi consectetur veniam similique ad
+          earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
+          fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
+          suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
+          modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
+          totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
+          quasi aliquam eligendi, placeat qui corporis!
+        </div> */}
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <section className="px-1 md:px-16 lg:px-28 my-4" >
+        <h2 className=" text-lg sm:text-xl" >THEORY</h2>
+        <div>
+          <div className={"my-2 p-4"}>
+            <p class="ltx_p">The transport of pollution in a three-dimensional stream with the diffusion coefficient <math id="S1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> flowing with velocity <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span>, when there is source or sink <math id="S1.p1.m3" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math>, can be described by the convection-diffusion equation</p>
+
+            <table id="S1.E1" class="ltx_equation ltx_eqn_table">
+              <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="\frac{\partial C}{\partial t}=\nabla\cdot(D\,\nabla C)-\nabla\cdot(C\,\textbf{%v})+{\cal R}," display="block"><mrow><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>C</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mrow><mo>∇</mo><mo lspace="0em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo lspace="0.337em">⁢</mo><mrow><mo rspace="0.167em">∇</mo><mi>C</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mo>∇</mo><mo lspace="0em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo lspace="0.170em">⁢</mo><mtext class="ltx_mathvariant_bold">v</mtext></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+
+          <div className={"my-2 p-4"}>
+            <p class="ltx_p">where <math id="S1.p1.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is the pollution concentration.
+              The transport equation (<a href="#S1.E1" title="In I Transport equation in three dimensions ‣ Numerical simulation of radioactive pollution diffusion in 3D stream" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in a Cartesian coordinate system, where the fluid is moving with the constant velocity of <span class="ltx_text ltx_markedasmath ltx_font_bold">v</span> can be represented as</p>
+            <table id="A2.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+              <tbody id="S1.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E2.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial C(x,y,z,t)}{\partial t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+                <td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.E2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+                <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E2.m3" class="ltx_Math" alttext="\displaystyle\left(D_{x}\frac{\partial^{2}C(x,y,z,t)}{\partial x^{2}}+D_{y}%\frac{\partial^{2}C(x,y,z,t)}{\partial y^{2}}+D_{z}\frac{\partial^{2}C(x,y,z,t%)}{\partial z^{2}}\right)" display="inline"><mrow><mo>(</mo><mrow><mrow><msub><mi>D</mi><mi>x</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msub><mi>D</mi><mi>y</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msub><mi>D</mi><mi>z</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+              </tr></tbody>
+              <tbody id="S1.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_eqn_cell"></td>
+                <td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.E3.m1" class="ltx_Math" alttext="\displaystyle-" display="inline"><mo>−</mo></math></td>
+                <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E3.m2" class="ltx_Math" alttext="\displaystyle\left(v_{x}\frac{\partial C(x,y,z,t)}{\partial x}+v_{y}\frac{%\partial C(x,y,z,t)}{\partial y}+v_{z}\frac{\partial C(x,y,z,t)}{\partial z}\right)" display="inline"><mrow><mo>(</mo><mrow><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msub><mi>v</mi><mi>z</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+              </tr></tbody>
+              <tbody id="S1.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_eqn_cell"></td>
+                <td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.E4.m1" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+                <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E4.m2" class="ltx_Math" alttext="\displaystyle{\cal R}(x,y,z,t)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+          <div>
+            <p class="ltx_p">where</p>
+            <ul id="S1.I1" class="ltx_itemize" className={""} >
+              <li id="S1.I1.i1" class="ltx_item" style={{ "list-style-type": "none" }}>
+                <span class="ltx_tag ltx_tag_item">•</span>
+                <div id="S1.I1.i1.p1" class="ltx_para">
+                  <p class="ltx_p"><math id="S1.I1.i1.p1.m1" class="ltx_Math" alttext="C(x,y,z,t)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>: the pollution concentration at location <math id="S1.I1.i1.p1.m2" class="ltx_Math" alttext="(x,y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> and time <math id="S1.I1.i1.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>,</p>
+                </div>
+              </li>
+
+              <li id="S1.I1.i2" class="ltx_item" style={{ "list-style-type": "none" }}>
+                <span class="ltx_tag ltx_tag_item">•</span>
+                <div id="S1.I1.i2.p1" class="ltx_para">
+                  <p class="ltx_p"><math id="S1.I1.i2.p1.m1" class="ltx_Math" alttext="D_{x},\ D_{y},\ D_{z}" display="inline"><mrow><msub><mi>D</mi><mi>x</mi></msub><mo rspace="0.667em">,</mo><msub><mi>D</mi><mi>y</mi></msub><mo rspace="0.667em">,</mo><msub><mi>D</mi><mi>z</mi></msub></mrow></math>: the horizontal and vertical components of diffusion coefficient. For an anisotropic medium, like rivers and lakes, <math id="S1.I1.i2.p1.m2" class="ltx_Math" alttext="D_{x},\ D_{y},D_{z}" display="inline"><mrow><msub><mi>D</mi><mi>x</mi></msub><mo rspace="0.667em">,</mo><msub><mi>D</mi><mi>y</mi></msub><mo>,</mo><msub><mi>D</mi><mi>z</mi></msub></mrow></math> are unequal, while for an isotropic medium, the diffusion proceeds at the same rate in horizontal and vertical directions,</p>
+                </div>
+              </li>
+              <li id="S1.I1.i3" class="ltx_item" style={{ "list-style-type": "none" }}>
+                <span class="ltx_tag ltx_tag_item">•</span>
+                <div id="S1.I1.i3.p1" class="ltx_para">
+                  <p class="ltx_p"><math id="S1.I1.i3.p1.m1" class="ltx_Math" alttext="v_{x},\ v_{y},\ v_{z}" display="inline"><mrow><msub><mi>v</mi><mi>x</mi></msub><mo rspace="0.667em">,</mo><msub><mi>v</mi><mi>y</mi></msub><mo rspace="0.667em">,</mo><msub><mi>v</mi><mi>z</mi></msub></mrow></math>: the flow velocity components in the <math id="S1.I1.i3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="S1.I1.i3.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="S1.I1.i3.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> directions. They are constant in each spatial direction for the studied contaminated region,</p>
+                </div>
+              </li>
+              <li id="S1.I1.i4" class="ltx_item" style={{ "list-style-type": "none" }}>
+                <span class="ltx_tag ltx_tag_item">•</span>
+                <div id="S1.I1.i4.p1" class="ltx_para">
+                  <p class="ltx_p"><math id="S1.I1.i4.p1.m1" class="ltx_Math" alttext="{\cal R}(x,y,z,t)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>: the pollution emission at location <math id="S1.I1.i4.p1.m2" class="ltx_Math" alttext="(x,y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> and time <math id="S1.I1.i4.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        {/*  */}
+        <div id="S1.p2" class="ltx_para">
+          <div className={"my-2 p-4 leading-6"} >
+            <p class="ltx_p">Considering the boundary conditions, the pollution concentration must converge to zero as <math id="S1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="S1.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, or <math id="S1.p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> tends to infinity</p>
+            <table id="A2.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+              <tbody id="S1.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E5.m1" class="ltx_Math" alttext="\displaystyle\lim_{x\to\pm\infty}C(x,y,z,t)\rightarrow 0," display="inline"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+              </tr></tbody>
+              <tbody id="S1.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E6.m1" class="ltx_Math" alttext="\displaystyle\lim_{y\to\pm\infty}C(x,y,z,t)\rightarrow 0," display="inline"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>y</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+              </tr></tbody>
+              <tbody id="S1.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E7.m1" class="ltx_Math" alttext="\displaystyle\lim_{z\to\pm\infty}C(x,y,z,t)\rightarrow 0;" display="inline"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>z</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow><mo>;</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+              </tr></tbody>
+            </table>
+            <p class="ltx_p">and the initial condition,</p>
+            <table id="A2.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+              <tbody id="S1.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E8.m1" class="ltx_Math" alttext="\displaystyle C(x,y,z,t=0)=M\ \delta(x-x_{0})\ \delta(y-y_{0})\ \delta(z-z_{0})," display="inline"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo lspace="0.500em">⁢</mo><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.500em">⁢</mo><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.500em">⁢</mo><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+
+          <div className={"my-2 p-4 leading-6"} >
+            <p class="ltx_p">where <math id="S1.p2.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the released point-source pollution at location <math id="S1.p2.m5" class="ltx_Math" alttext="(x_{0},y_{0},z_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo>,</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> and time <math id="S1.p2.m6" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>. In a 1D model in <math id="S1.p2.m7" class="ltx_Math" alttext="x-" display="inline"><mrow><mi>x</mi><mo>−</mo></mrow></math>direction, <math id="S1.p2.m8" class="ltx_Math" alttext="M\equiv\frac{M}{L_{y}\cdot L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></mfrac></mrow></math> represents the surface mass flux or total mass per unit area, where <math id="S1.p2.m9" class="ltx_Math" alttext="L_{y}\cdot L_{z}" display="inline"><mrow><msub><mi>L</mi><mi>y</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>L</mi><mi>z</mi></msub></mrow></math> is the area scale of neglected dimensions. Similarly, in a 2D model in the <math id="S1.p2.m10" class="ltx_Math" alttext="x-y" display="inline"><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></math> direction, <math id="S1.p2.m11" class="ltx_Math" alttext="M\equiv\frac{M}{L_{z}}" display="inline"><mrow><mi>M</mi><mo>≡</mo><mfrac><mi>M</mi><msub><mi>L</mi><mi>z</mi></msub></mfrac></mrow></math> represents linear mass flux or total mass per unit length, where <math id="S1.p2.m12" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> is the area scale of neglected dimension.
+              The total mass of pollution at time <math id="S1.p2.m13" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> must be equal to the number of undecayed pollution at time <math id="S1.p2.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, i.e. <math id="S1.p2.m15" class="ltx_Math" alttext="M(t)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. So, the boundary and initial conditions are</p>
+            <table id="S1.E9" class="ltx_equation ltx_eqn_table">
+
+              <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="\int_{{\ooalign{\hfil$V$\hfil\cr\kern 0.56001pt--\hfil\cr}}}d{\ooalign{\hfil$V%$\hfil\cr\kern 0.80002pt--\hfil\cr}}\,C(x,y,z,t)=M(t)." display="block"><mrow><mrow><mrow><msub><mo>∫</mo><mtable rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></msub><mrow><mrow><mo lspace="0.167em" rspace="0em">𝑑</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></mrow><mo lspace="0.170em">⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+
+          <div className={"my-2 p-4 leading-6 "}>
+            <p class="ltx_p">If the source of the contamination is radioactive material, the mass of undecayed material at time <math id="S1.p2.m16" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is given by the radioactive decay law</p>
+            <table id="S1.E10" class="ltx_equation ltx_eqn_table">
+
+              <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E10.m1" class="ltx_Math" alttext="M(t)=M_{0}\,e^{-\lambda\,t}," display="block"><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>M</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>λ</mi><mo lspace="0.170em">⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+
+          <div className={"my-2 p-4 leading-6 mb-6 "} >
+            <p class="ltx_p">where <math id="S1.p2.m17" class="ltx_Math" alttext="\lambda=\frac{\ln(2)}{T_{1/2}}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><msub><mi>T</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msub></mfrac></mrow></math> is the decay constant for the induced radioactive material.
+              For an instantaneous point-source pollution</p>
+            <table id="A2.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+              <tbody id="S1.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E11.m1" class="ltx_Math" alttext="\displaystyle C(x,y,z,t)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+                <td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.E11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+                <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E11.m3" class="ltx_Math" alttext="\displaystyle\frac{M_{0}}{(4\pi t)^{3/2}(D_{x}D_{y}D_{z})^{1/2}}" display="inline"><mstyle displaystyle="true"><mfrac><msub><mi>M</mi><mn>0</mn></msub><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>D</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>D</mi><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+              </tr></tbody>
+              <tbody id="S1.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+                <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+                <td class="ltx_td ltx_eqn_cell"></td>
+                <td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.E12.m1" class="ltx_Math" alttext="\displaystyle\times" display="inline"><mo>×</mo></math></td>
+                <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E12.m2" class="ltx_Math" alttext="\displaystyle\exp{\left(-\frac{(x-x_{0}-v_{x}t)^{2}}{4D_{x}t}-\frac{(y-y_{0}-v%_{y}t)^{2}}{4D_{y}t}-\frac{(z-z_{0}-v_{z}t)^{2}}{4D_{z}t}-\frac{\ln(2)}{T_{1/2%}}\,t\right)}." display="inline"><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo>−</mo><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><msub><mi>D</mi><mi>x</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub><mo>−</mo><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><msub><mi>D</mi><mi>y</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub><mo>−</mo><mrow><msub><mi>v</mi><mi>z</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><msub><mi>D</mi><mi>z</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><msub><mi>T</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msub></mfrac></mstyle><mo lspace="0.170em">⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+                <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+                <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+              </tr></tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="px-1 md:px-16 lg:px-28" >
+        <h2 className=" text-lg sm:text-xl" >NUMERICAL RESULTS</h2>
+
+        <p className={"py-4"} >
+          To study the pollution diffusion from a radioactive source in a river or lake, we develop
+          a computational toolkit in Matlab to solve the transport equation and calculate pollution
+          concentration as a function of time at different locations.
+        </p>
+
+        <Comp photo2={gif_1D} photo={photo_1D} title={"1D pedagogical stream"} info1={`
+        For the first implementation, we study the diffusion of radioactive pollution from an
+        instantaneous release in a 1D water canal flowing at a constant speed. In the image above, we show
+        the pollution release in a one-dimensional water canal flowing in the x direction with a
+        constant speed vx. The Matlab scripts listed in Appendix A, create 2D motion plots (in
+        AVI and GIF formats) for the evolution of pollution concentration.`}
+          info2={`FIG. 2: Few screenshots of 2D motion plots obtained from the Matlab toolkit that
+        calculates the pollution diffusion obtained from instantaneous release from radioactive
+        neutron source 16N (with a half-life T1/2 = 7.13 s) as a function of time t and distance x, in
+        a water canal flowing with a constant speed vx = 0.3 m/s and a diffusion coefficient`}
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <Comp photo2={gif_2D} photo={photo_2D} title={"2D pedagogical stream"}
+          info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
+      release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
+      The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
+      for the evolution of pollution concentration from a release at point (x0, y0).`}
+          info2={`FIG. 3: Few screenshots of 2D motion plots obtained from the Matlab toolkit that calculates
+      the pollution diffusion obtained from instantaneous release from radioactive neutron source
+      16N (with a half-life T1/2 = 7.13 s) at (x0 = 0 m, y0 = 0.5 m) as a function of time t
+      and distances x and y, in a water river flowing with a constant speeds vx = 0.3 m/s and
+      vy = 0.0 m/s and diffusion coefficients Dx = Dy = 0.001.`}
+        />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* <section>
+        <h2 className=" text-lg sm:text-xl md:px-6 lg:px-10" >Theory</h2>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section> */}
+
     </main>
   );
 }
