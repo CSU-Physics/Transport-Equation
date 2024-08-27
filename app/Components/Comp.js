@@ -20,6 +20,11 @@ const Comp = (props) => {
                 </p>
                 <Image src={props.photo2} className="ml-2 rounded-lg h-[300px] w-[350px] lg:h-[350px] md:w-[500px]" />
             </div>
+
+            <div className="flex flex-col text-sm text-blue-400 font-semibold text-center" >
+                <a target="blank" href={props.link1} >Link to Matlab simulation Files</a>
+                {/* <a target="blank" className=" to-blue-300" href={props.link2} >XmGrace file: BE_A.agr</a> */}
+            </div>
         </div>
     )
 }

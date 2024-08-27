@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       <section className="px-1 md:px-16 lg:px-28 my-4" >
-        <h2 className=" text-lg sm:text-xl" >THEORY</h2>
+        <h2 className=" text-lg sm:text-xl" >TRANSPORT EQUATION IN THREE DIMENSIONS</h2>
         <div>
           <div className={"my-2 p-4"}>
             <div className={"mb-8"} >
