@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Comp from "./Components/Comp";
 import photo_1D from "./Assets/1D.png"
+import photo_0 from "./Assets/1D.jpg"
 import gif_1D from "./Assets/1D.gif"
 import photo_2D from "./Assets/2D.png"
 import gif_2D from "./Assets/2D.gif"
-import photo_3D from "./Assets/3D.gif"
+import gif_3D from "./Assets/3D.gif"
 import "./LaTeXML.css"
 import "./ltx-article.css"
 import "./ltx-listings.css"
 export default function Home() {
   return (
-    <main className="p-2 px-8 py-2 h-[100%] flex flex-col justify-center md:px-20 mt-8">
-      <h1 className=" text-xl sm:text-2xl md:px-8 lg:px-12" >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+    <main className="p-2 px-8 py-2 h-[100%] flex flex-col justify-center md:px-20 mt-8  ">
+      <h1 className=" text-xl sm:text-2xl md:px-8 lg:px-12 font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
       <section className={"mt-4 my-6 md:my2"} >
         <div className="leading-6 md:px-8 lg:px-12" >
           In an earlier study, we showed how Pulsed Neutron Activation (PNA) analysis could be implemented to estimate the flow speed in a one-dimensional pipeline [1]. The neutron capture by target stable nuclides, like Oxygen-16 in water, leads to radioactive Nitrogen-16 emitting high-energy
@@ -41,7 +42,7 @@ export default function Home() {
           quasi aliquam eligendi, placeat qui corporis!
         </div> */}
       </section>
-
+      {/* Transport_Equation */}
       <section className="px-1 md:px-16 lg:px-28 my-4" >
         <h2 className=" text-lg sm:text-xl" >TRANSPORT EQUATION IN THREE DIMENSIONS</h2>
         <div>
@@ -178,7 +179,8 @@ export default function Home() {
 
               <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
                 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-                <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="\int_{{\ooalign{\hfil$V$\hfil\cr\kern 0.56001pt--\hfil\cr}}}d{\ooalign{\hfil$V%$\hfil\cr\kern 0.80002pt--\hfil\cr}}\,C(x,y,z,t)=M(t)." display="block"><mrow><mrow><mrow><msub><mo>∫</mo><mtable rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></msub><mrow><mrow><mo lspace="0.167em" rspace="0em">𝑑</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></mrow><mo lspace="0.170em">⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+                {/* <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="\int_{{\ooalign{\hfil$V$\hfil\cr\kern 0.56001pt--\hfil\cr}}}d{\ooalign{\hfil$V%$\hfil\cr\kern 0.80002pt--\hfil\cr}}\,C(x,y,z,t)=M(t)." display="block"><mrow><mrow><mrow><msub><mo>∫</mo><mtable rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></msub><mrow><mrow><mo lspace="0.167em" rspace="0em">𝑑</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext>–</mtext></mtd></mtr></mtable></mrow><mo lspace="0.170em">⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td> */}
+                <td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="\int_{{v}d{v}}\,C(x,y,z,t)=M(t)." display="block"><mrow><mrow><mrow><msub><mo>∫</mo><mtable rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"><mtext></mtext></mtd></mtr></mtable></msub><mrow><mrow><mo lspace="0.167em" rspace="0em">𝑑</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_nopad_l ltx_nopad_r"><mi>V</mi><mrow></mrow></mtd></mtr><mtr><mtd class="ltx_nopad_l ltx_nopad_r" columnalign="left"></mtd></mtr></mtable></mrow><mo lspace="0.170em">⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
                 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
                 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
               </tr></tbody>
@@ -242,7 +244,7 @@ export default function Home() {
           concentration as a function of time at different locations.
         </p>
 
-        <Comp photo2={gif_1D} photo={photo_1D} title={"1D pedagogical stream"} info1={`
+        <Comp photo0={photo_0} photo2={gif_1D} photo={photo_1D} title={" Instantaneous release of radioactive pollution in a 1D pedagogical stream"} info1={`
         For the first implementation, we study the diffusion of radioactive pollution from an
         instantaneous release in a 1D water canal flowing at a constant speed. In the image above, we show
         the pollution release in a one-dimensional water canal flowing in the x direction with a
@@ -254,7 +256,19 @@ export default function Home() {
         a water canal flowing with a constant speed vx = 0.3 m/s and a diffusion coefficient`}
         />
 
-        <Comp photo2={gif_2D} photo={photo_2D} title={"2D pedagogical stream"}
+        <Comp photo2={gif_2D} photo={photo_2D} title={"Instantaneous release of radioactive pollution in a 2D pedagogical stream"}
+          info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
+      release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
+      The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
+      for the evolution of pollution concentration from a release at point (x0, y0).`}
+          info2={`FIG. 3: Few screenshots of 2D motion plots obtained from the Matlab toolkit that calculates
+      the pollution diffusion obtained from instantaneous release from radioactive neutron source
+      16N (with a half-life T1/2 = 7.13 s) at (x0 = 0 m, y0 = 0.5 m) as a function of time t
+      and distances x and y, in a water river flowing with a constant speeds vx = 0.3 m/s and
+      vy = 0.0 m/s and diffusion coefficients Dx = Dy = 0.001.`}
+        />
+
+        <Comp photo2={gif_2D} photo={photo_2D} title={"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}
           info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
       release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
       The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
