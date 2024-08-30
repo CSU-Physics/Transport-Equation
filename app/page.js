@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Comp from "./Components/Comp";
+import Comp2 from "./Components/Comp2";
 import photo_1D from "./Assets/1D.png"
 import photo_0 from "./Assets/1D.jpg"
 import gif_1D from "./Assets/1D.gif"
 import photo_2D from "./Assets/2D.png"
+import photo_3D from "./Assets/Untitled.png"
 import gif_2D from "./Assets/2D.gif"
 import gif_3D from "./Assets/3D.gif"
 import "./LaTeXML.css"
@@ -268,7 +270,7 @@ export default function Home() {
       vy = 0.0 m/s and diffusion coefficients Dx = Dy = 0.001.`}
         />
 
-        <Comp photo2={gif_2D} photo={photo_2D} title={"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}
+        <Comp2 photo2={gif_3D} photo={photo_3D} title={"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}
           info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
       release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
       The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
