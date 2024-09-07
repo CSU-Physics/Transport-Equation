@@ -272,10 +272,10 @@ export default function Home() {
 
         <Comp2 photo2={gif_3D} photo={photo_3D} title={"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}
           info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
-      release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
-      The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
+      release in a 3D water stream flowing at constant speeds vx and vy in the x and y directions.
+      The Matlab scripts listed in Appendix B, create 3D motion plots (in AVI and GIF formats)
       for the evolution of pollution concentration from a release at point (x0, y0).`}
-          info2={`FIG. 3: Few screenshots of 2D motion plots obtained from the Matlab toolkit that calculates
+          info2={`FIG. 3: Few screenshots of 3D motion plots obtained from the Matlab toolkit that calculates
       the pollution diffusion obtained from instantaneous release from radioactive neutron source
       16N (with a half-life T1/2 = 7.13 s) at (x0 = 0 m, y0 = 0.5 m) as a function of time t
       and distances x and y, in a water river flowing with a constant speeds vx = 0.3 m/s and
