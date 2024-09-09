@@ -12,6 +12,7 @@ const Comp2 = (props) => {
             <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
                 <p className="" >
                     {props.info1}
+                    
                 </p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-lg flex-1" >

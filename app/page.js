@@ -246,49 +246,109 @@ export default function Home() {
           concentration as a function of time at different locations.
         </p>
 
-        <Comp photo0={photo_0} photo2={gif_1D} photo={photo_1D} title={" Instantaneous release of radioactive pollution in a 1D pedagogical stream"} info1={`
-        For the first implementation, we study the diffusion of radioactive pollution from an
-        instantaneous release in a 1D water canal flowing at a constant speed. In the image above, we show
-        the pollution release in a one-dimensional water canal flowing in the x direction with a
-        constant speed vx. The Matlab scripts listed in Appendix A, create 2D motion plots (in
-        AVI and GIF formats) for the evolution of pollution concentration.`}
-          info2={`FIG. 2: Few screenshots of 2D motion plots obtained from the Matlab toolkit that
-        calculates the pollution diffusion obtained from instantaneous release from radioactive
-        neutron source 16N (with a half-life T1/2 = 7.13 s) as a function of time t and distance x, in
-        a water canal flowing with a constant speed vx = 0.3 m/s and a diffusion coefficient`}
-        />
+        <div>
+          {/* 1D */}
+          <div className="bg-gray-100 p-2 px-10 lg:px-12 py-4 h-[100%] flex flex-col gap-4 mb-6 rounded-lg " >
+            <h3 className=" text-md sm:text-lg" >{"Instantaneous release of radioactive pollution in a 1D pedagogical stream"}:</h3>
+            <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+              <Image src={photo_0} className="rounded-lg max-w-[300px] sm:max-w-[500px] " />
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="" >
+                For the first implementation, we study the diffusion of radioactive pollution from an
+                instantaneous release in a 1D water canal flowing at a constant speed. In the image above, we show
+                the pollution release in a one-dimensional water canal flowing in the x direction with a
+                constant speed v<sub>x</sub>. The Matlab scripts listed in Appendix A, create 2D motion plots (in
+                AVI and GIF formats) for the evolution of pollution concentration.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+              <Image src={photo_1D} className="rounded-lg" />
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="mb-4" >
+                FIG. 2: Few screenshots of 2D motion plots obtained from the Matlab toolkit that
+                calculates the pollution diffusion obtained from instantaneous release from radioactive
+                neutron source 16N (with a half-life T<sub>1/2</sub> = 7.13 s) as a function of time t and distance x, in
+                a water canal flowing with a constant speed v<sub>x</sub> = 0.3 m/s and a diffusion coefficient
+              </p>
+              <Image src={gif_1D} className="ml-2 rounded-lg h-[300px] w-[350px] lg:h-[350px] md:w-[500px]" />
+            </div>
 
-        <Comp photo2={gif_2D} photo={photo_2D} title={"Instantaneous release of radioactive pollution in a 2D pedagogical stream"}
-          info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
-      release in a 2D water stream flowing at constant speeds vx and vy in the x and y directions.
-      The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
-      for the evolution of pollution concentration from a release at point (x0, y0).`}
-          info2={`FIG. 3: Few screenshots of 2D motion plots obtained from the Matlab toolkit that calculates
-      the pollution diffusion obtained from instantaneous release from radioactive neutron source
-      16N (with a half-life T1/2 = 7.13 s) at (x0 = 0 m, y0 = 0.5 m) as a function of time t
-      and distances x and y, in a water river flowing with a constant speeds vx = 0.3 m/s and
-      vy = 0.0 m/s and diffusion coefficients Dx = Dy = 0.001.`}
-        />
+            <div className="flex flex-col text-sm text-blue-400 font-semibold text-center" >
+              <a target="blank" href={""} >Link to Matlab simulation Files</a>
+              {/* <a target="blank" className=" to-blue-300" href={props.link2} >XmGrace file: BE_A.agr</a> */}
+            </div>
+          </div>
+        </div>
 
-        <Comp2 photo2={gif_3D} photo={photo_3D} title={"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}
-          info1={`In this section, we study the diffusion of radioactive pollution from an instantaneous
-      release in a 3D water stream flowing at constant speeds vx and vy in the x and y directions.
-      The Matlab scripts listed in Appendix B, create 3D motion plots (in AVI and GIF formats)
-      for the evolution of pollution concentration from a release at point (x0, y0).`}
-          info2={`FIG. 3: Few screenshots of 3D motion plots obtained from the Matlab toolkit that calculates
-      the pollution diffusion obtained from instantaneous release from radioactive neutron source
-      16N (with a half-life T1/2 = 7.13 s) at (x0 = 0 m, y0 = 0.5 m) as a function of time t
-      and distances x and y, in a water river flowing with a constant speeds vx = 0.3 m/s and
-      vy = 0.0 m/s and diffusion coefficients Dx = Dy = 0.001.`}
-        />
+        <div>
+          {/* 2D */}
+          <div className="bg-gray-100 p-2 px-10 lg:px-12 py-4 h-[100%] flex flex-col gap-4 mb-6 rounded-lg " >
+            <h3 className=" text-md sm:text-lg" >{"Instantaneous release of radioactive pollution in a 2D pedagogical stream"}:</h3>
 
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="" >
+                In this section, we study the diffusion of radioactive pollution from an instantaneous
+                release in a 2D water stream flowing at constant speeds v<sub>x</sub> and v<sub>y</sub> in the x and y directions.
+                The Matlab scripts listed in Appendix B, create 2D motion plots (in AVI and GIF formats)
+                for the evolution of pollution concentration from a release at point ( x<sub>0</sub>, y<sub>0</sub>).
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+              <Image src={photo_2D} className="rounded-lg" />
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="mb-4" >
+                FIG. 3: Few screenshots of 2D motion plots obtained from the Matlab toolkit that calculates
+                the pollution diffusion obtained from instantaneous release from radioactive neutron source
+                16N (with a half-life T<sub>1/2</sub> = 7.13 s) at (x<sub>0</sub> = 0 m, y<sub>0</sub> = 0.5 m) as a function of time t
+                and distances x and y, in a water river flowing with a constant speeds  v<sub>x</sub> = 0.3 m/s and
+                v<sub>y</sub> = 0.0 m/s and diffusion coefficients D<sub>x</sub> = D<sub>y</sub> = 0.001.
+              </p>
+              {/* <Image src={props.photo2} className="ml-2 rounded-lg h-[300px] w-[350px] lg:h-[350px] md:w-[500px]" /> */}
+              <Image src={gif_2D} className="ml-2 rounded-lg h-[375px] w-[525px]" />
+            </div>
+
+            <div className="flex flex-col text-sm text-blue-400 font-semibold text-center" >
+              <a target="blank" href={""} >Link to Matlab simulation Files</a>
+              {/* <a target="blank" className=" to-blue-300" href={props.link2} >XmGrace file: BE_A.agr</a> */}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          {/* 3D */}
+          <div className="bg-gray-100 p-2 px-10 lg:px-12 py-4 h-[100%] flex flex-col gap-4 mb-6 rounded-lg " >
+            <h3 className=" text-md sm:text-lg" >{"Instantaneous release of radioactive pollution in a 3D pedagogical stream"}:</h3>
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="" >
+                In this section, we study the diffusion of radioactive pollution from an instantaneous
+                release in a 3D water stream flowing at constant speeds v<sub>x</sub>, v<sub>y</sub>, and v<sub>z</sub> in the x, y, and z directions.
+                The Matlab scripts listed in Appendix B, create 3D motion plots (in AVI and GIF formats)
+                for the evolution of pollution concentration from a release at point (x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>).
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+              <Image src={photo_3D} className="rounded-lg" />
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-lg flex-1 " >
+              <p className="mb-4" >
+                FIG. 3: Few screenshots of 3D motion plots obtained from the Matlab toolkit that calculates
+                the pollution diffusion obtained from instantaneous release from radioactive neutron source
+                16N (with a half-life T<sub>1/2</sub> = 7.13 s) at (x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>) as a function of time t
+                and distances x and y, in a water river flowing with a constant speeds v<sub>x</sub> = 0.3 m/s,
+                v<sub>y</sub> = 0.2  m/s, and v<sub>z</sub> = 0.1 m/s and diffusion coefficients D<sub>x</sub> = 0.001 D<sub>y</sub> = D<sub>z</sub> = 0.01.
+              </p>
+              <Image src={gif_3D} className="ml-2 rounded-lg h-[375px] w-[525px]" />
+            </div>
+            <div className="flex flex-col text-sm text-blue-400 font-semibold text-center" >
+              <a target="blank" href={""} >Link to Matlab simulation Files</a>
+              {/* <a target="blank" className=" to-blue-300" href={props.link2} >XmGrace file: BE_A.agr</a> */}
+            </div>
+          </div>
+        </div>
       </section>
-
-      {/* <section>
-        <h2 className=" text-lg sm:text-xl md:px-6 lg:px-10" >Theory</h2>
-
-      </section> */}
-
     </main>
   );
 }
