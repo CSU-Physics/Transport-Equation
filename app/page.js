@@ -8,6 +8,7 @@ import photo_2D from "./Assets/2D.png"
 import photo_3D from "./Assets/Untitled.png"
 import gif_2D from "./Assets/2D.gif"
 import gif_3D from "./Assets/3D.gif"
+import header from "./Assets/header.jpeg"
 import "./LaTeXML.css"
 import "./ltx-article.css"
 import "./ltx-listings.css"
@@ -15,6 +16,9 @@ export default function Home() {
   return (
     <main className="p-2 px-8 py-2 h-[100%] flex flex-col justify-center md:px-20 mt-8  ">
       <h1 className=" text-xl sm:text-2xl md:px-8 lg:px-12 font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+      <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+        <Image src={header} className="w-[1250px] my-4 " />
+      </div>
       <section className={"mt-4 my-6 md:my2"} >
         <div className="leading-6 md:px-8 lg:px-12" >
           In an earlier study, we showed how Pulsed Neutron Activation (PNA) analysis could be implemented to estimate the flow speed in a one-dimensional pipeline [1]. The neutron capture by target stable nuclides, like Oxygen-16 in water, leads to radioactive Nitrogen-16 emitting high-energy
