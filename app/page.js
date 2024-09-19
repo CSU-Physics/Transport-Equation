@@ -9,13 +9,20 @@ import photo_3D from "./Assets/Untitled.png"
 import gif_2D from "./Assets/2D.gif"
 import gif_3D from "./Assets/3D.gif"
 import header from "./Assets/header.jpeg"
+import { FaArrowLeft } from "react-icons/fa6";
 import "./LaTeXML.css"
 import "./ltx-article.css"
 import "./ltx-listings.css"
 export default function Home() {
   return (
     <main className="p-2 px-8 py-2 h-[100%] flex flex-col justify-center md:px-20 mt-8  ">
-      <h1 className=" text-xl sm:text-2xl md:px-8 lg:px-12 font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+      <div className="flex flex-row p-0 items-center md:px-8 lg:px-12" >
+        <a className="" target="" href={"https://csu-physics.github.io/"} >
+          <FaArrowLeft size={60} className="w-[45px] h-[35px] " />
+        </a>
+        <h1 className=" text-xl sm:text-2xl font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+      </div>
+
       <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
         <Image src={header} className="w-[1250px] my-4 " />
       </div>
