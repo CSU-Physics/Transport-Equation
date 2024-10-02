@@ -26,9 +26,9 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="max-w-[1640px] mx-auto flex justify-between items-center px-6 py-2 mt-4 " >
-        <div className="flex-1 " >
-          <div className="w-12" >
+      <div className="max-w-[1640px] mx-auto flex justify-between items-center px-6  mt-0 " >
+        <div className="flex-1 h-[225px]" >
+          <div className="w-12 " >
             <a className="" target="" href={"https://csu-physics.github.io/"} >
               <FaHome size={60} className="w-[45px] h-[30px] " />
             </a>
@@ -36,7 +36,9 @@ export default function Home() {
 
         </div>
         <div className={"flex-4"} >
-          <h1 className=" text-lg md:text-xl lg:text-2xl font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+          <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+            <Image src={header} className="w-[1250px] my-2 " />
+          </div>
         </div>
 
         <div className="flex-1" ></div>
@@ -50,11 +52,17 @@ export default function Home() {
           <h1 className=" text-xl sm:text-2xl font-bold " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
         </div> */}
 
-        <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
+        {/* <div className="flex flex-col items-center justify-center rounded-lg flex-1" >
           <Image src={header} className="w-[1250px] my-4 " />
-        </div>
+        </div> */}
         <section className={"mt-4 my-6 md:my2"} >
-          <div className="leading-6 md:px-8 lg:px-12" >
+          <div className="flex flex-row p-0 items-center md:px-8 lg:px-12" >
+            {/* <a className="" target="" href={"https://csu-physics.github.io/"} >
+              <FaArrowLeft size={60} className="w-[45px] h-[35px] " />
+            </a> */}
+            <h1 className=" text-xl sm:text-2xl " >Numerical simulation of radioactive pollution diffusion in 3D stream</h1>
+          </div>
+          <div className="leading-6 md:px-8 lg:px-12 py-2" >
             In an earlier study, we showed how Pulsed Neutron Activation (PNA) analysis could be implemented to estimate the flow speed in a one-dimensional pipeline [1]. The neutron capture by target stable nuclides, like Oxygen-16 in water, leads to radioactive Nitrogen-16 emitting high-energy
             gamma-rays, which travels with flowing water in a channel and can be detected and analyzed downstream in the pipe to get information about its average transport time. Then by having the traveled
             distance, i.e., the distance between the gamma source and the gamma detector, one can obtain
@@ -136,7 +144,7 @@ export default function Home() {
             </div>
             <div>
               <p class="ltx_p">where</p>
-              
+
               <ul id="S1.I1" class="ltx_itemize" className={" pl-4"} >
                 <li id="S1.I1.i1" class="ltx_item" style={{ "list-style-type": "none" }}>
                   <span class="ltx_tag ltx_tag_item">•</span>
