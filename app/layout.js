@@ -1,26 +1,25 @@
-import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "Numerical simulation of radioactive pollution",
-  description: "",
+  title: "Radioactive Pollution Transport | CSU Physics",
+  description: "Convection–diffusion theory and MATLAB simulations for radioactive pollution transport in one-, two-, and three-dimensional water flows.",
+  keywords: ["transport equation", "convection diffusion", "radioactive pollution", "computational physics", "MATLAB"],
+  authors: [{ name: "Dr. Mohammadreza Hadizadeh", url: "https://people.ohio.edu/hadizadm/" }],
+  alternates: { canonical: "https://csu-physics.github.io/Transport-Equation/" },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <script type="text/javascript">
-          var sc_project=13006461;
-          var sc_invisible=1;
-          var sc_security="3ab8d0c3";
-        </script>
-        <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-        <noscript><div class="statcounter">
-          <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
-            <img class="statcounter" src="https://c.statcounter.com/13006461/0/3ab8d0c3/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
+      <body>
+        <Script id="statcounter-config" strategy="afterInteractive">
+          {`var sc_project=13006461; var sc_invisible=1; var sc_security="3ab8d0c3";`}
+        </Script>
+        <Script src="https://www.statcounter.com/counter/counter.js" strategy="afterInteractive" />
+        <noscript><div className="statcounter">
+          <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noreferrer">
+            <img className="statcounter" src="https://c.statcounter.com/13006461/0/3ab8d0c3/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
           </a></div></noscript>
         {children}
       </body>
