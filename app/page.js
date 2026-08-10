@@ -7,7 +7,7 @@ import photo_3D from "./Assets/Untitled.png"
 import gif_2D from "./Assets/2D.gif"
 import gif_3D from "./Assets/3D.gif"
 import header from "./Assets/header.jpeg"
-import { FaArrowRight, FaEnvelope, FaGithub, FaHome, FaPhone, FaUniversity } from "react-icons/fa";
+import { FaArrowRight, FaGithub, FaHome } from "react-icons/fa";
 import "./LaTeXML.css"
 import "./ltx-article.css"
 import "./ltx-listings.css"
@@ -378,19 +378,22 @@ export default function Home() {
         <section className="contact-section" id="contact">
           <div className="contact-intro">
             <p className="section-kicker section-kicker-light">Contact</p>
-            <h2>Educational and research collaborations are welcome.</h2>
-            <p>Please get in touch to discuss computational physics, transport modeling, student projects, or other opportunities to collaborate.</p>
+            <h2>Interested in educational or research collaboration?</h2>
+            <p>I welcome inquiries about educational and research collaborations of any kind, including joint projects, computational methods, classroom applications, and opportunities to extend these open resources.</p>
           </div>
-          <div className="contact-card">
-            <h3>Dr. Mohammadreza Hadizadeh</h3>
+          <address className="contact-card">
+            <div className="contact-avatar" aria-hidden="true">MH</div>
+            <div className="contact-card-copy">
+            <p className="contact-name">Dr. Mohammadreza Hadizadeh</p>
             <p className="contact-title">Professor of Physics</p>
-            <p>College of Engineering, Science, Technology and Agriculture<br />Central State University</p>
-            <div className="contact-links">
-              <a href="tel:+19373766273"><FaPhone /><span><small>Office</small>937 376-6273</span></a>
-              <a href="mailto:mhadizadeh@centralstate.edu"><FaEnvelope /><span><small>Email</small>mhadizadeh@centralstate.edu</span></a>
-              <a href="https://people.ohio.edu/hadizadm/" target="_blank" rel="noreferrer"><FaUniversity /><span><small>Web</small>people.ohio.edu/hadizadm</span></a>
-            </div>
+            <p className="contact-affiliation">College of Engineering, Science, Technology and Agriculture<br />Central State University</p>
+            <dl className="contact-details">
+              <div><dt>O</dt><dd><a href="tel:+19373766273">937 376-6273</a></dd></div>
+              <div><dt>E</dt><dd><a href="mailto:mhadizadeh@centralstate.edu">mhadizadeh@centralstate.edu</a></dd></div>
+              <div><dt>W</dt><dd><a href="https://people.ohio.edu/hadizadm/" target="_blank" rel="noopener noreferrer">https://people.ohio.edu/hadizadm/ <span aria-hidden="true">↗</span></a></dd></div>
+            </dl>
           </div>
+          </address>
         </section>
       </div>
       <footer><span>Transport Equation Project</span><span>Central State University Physics</span></footer>
